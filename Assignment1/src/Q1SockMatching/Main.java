@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class Main {
-    public static final String INPUT_TXT = "./resources/SockMatching/input.txt";
+    public static final String INPUT_TXT = "./resources/Q1SockMatching/input.txt";
 
     public static void main(String[] args) {
         SockPile sockPile = new SockPile();
