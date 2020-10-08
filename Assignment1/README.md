@@ -1,9 +1,9 @@
 ##### Commands are assumed to be run from the root of the folder provided.
-#####Hence the folder from which commands are run should contain src and resources folder , as well as "forms_rt.jar".
+##### Hence the folder from which commands are run should contain src and resources folder , as well as "forms_rt.jar".
 
 The source code is compiled used java 11 (Openjdk  "11.0.8").
 ***
-##**1) Sock Matching Robot:**
+## **1) Sock Matching Robot:**
 
 To execute the program run the following commands from the terminal.
 
@@ -27,7 +27,7 @@ To execute the program run the following commands from the terminal.
 - The final output will contain the number of pairs of socks in the Shelf once all possible matchings are done. 
 ****
 
-##**2) Data Modification System:**
+## **2) Data Modification System:**
 
 To execute the program run the following commands from the terminal:
 
@@ -91,7 +91,7 @@ Here is sample output and input format if TA1 wants to increase 170101086's mark
 
 
 
-##**3) Calculator for Differently Abled Persons:**
+## **3) Calculator for Differently Abled Persons:**
     
 To execute the program run the following commands from the terminal:
 
