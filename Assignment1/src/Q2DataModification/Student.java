@@ -2,14 +2,21 @@ package Q2DataModification;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * Class for storing student data in the memory. Contains variables based on columns in the stud file.
+ * Also contains a Semaphore for exclusively editing one Students entry.
+ */
 public class Student {
     private String rollNo;
     private String name;
     private String mailId;
     private Integer marks;
     private String teacherCode;
-    private Semaphore lock ;
+    private Semaphore lock;
 
+    /**
+     * Takes basic input for student and sets semaphore to allow one thread to edit.
+     */
     public Student(String rollNo, String name, String mailId, Integer marks, String teacherCode) {
         this.rollNo = rollNo;
         this.name = name;
@@ -17,6 +24,13 @@ public class Student {
         this.marks = marks;
         this.teacherCode = teacherCode;
         this.lock = new Semaphore(1);
+    }
+
+    /**
+     * Function used for printing to file
+     */
+    public String fileString() {
+        return rollNo + "," + name + "," + mailId + "," + marks.toString() + "," + teacherCode;
     }
 
     public Student() {
@@ -71,7 +85,5 @@ public class Student {
         this.teacherCode = teacherCode;
     }
 
-    public String fileString() {
-        return rollNo + "," + name + "," + mailId + "," + marks.toString() + "," + teacherCode;
-    }
+
 }

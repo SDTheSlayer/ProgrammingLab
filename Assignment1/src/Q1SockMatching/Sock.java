@@ -1,5 +1,8 @@
 package Q1SockMatching;
 
+/**
+ * Class for Storing ID and Color of a Sock
+ */
 public class Sock {
     private Integer id;
     private Integer color;

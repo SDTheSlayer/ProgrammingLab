@@ -4,8 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Class symbolising a pile of socks, has methods for adds and randomly removing socks
+ */
 public class SockPile {
+    /**
+     * List of all socks in the pile
+     */
     private List<Sock> sockList;
+
+    /**
+     * Monitor for ensuring synchronisation
+     */
     private final Object monitor;
     private final Random rand;
 
@@ -15,12 +25,19 @@ public class SockPile {
         rand = new Random();
     }
 
+    /**
+     * Adding Socks to the pile in synchronised manner
+     */
     public void addSock(Sock sock) {
         synchronized (monitor) {
             sockList.add(sock);
         }
     }
 
+    /**
+     * Pick a random sock from the List and delete it.
+     * A complete lock on the Sock Pile is needed since we are deleting elements from the List.
+     */
     public Sock pickSock() {
         synchronized (monitor) {
             if (sockList.isEmpty()) {

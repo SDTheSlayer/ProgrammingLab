@@ -1,5 +1,8 @@
 package Q1SockMatching;
 
+/**
+ * Class for adding sock pairs to the Shelf and displaying the various sock pairs currently in the shelf
+ */
 public class ShelfManager {
     private final Shelf shelf;
 

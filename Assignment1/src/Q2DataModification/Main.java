@@ -1,15 +1,18 @@
 package Q2DataModification;
 
-import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Main Class for taking initial input and running the program
+ */
 public class Main {
     private final static Scanner userScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         ModificationSystem modificationSystem = new ModificationSystem();
 
-        modificationSystem.readDataFromFile();
+
+
         boolean exit = false;
         while (!exit) {
             int choice;
@@ -23,18 +26,17 @@ public class Main {
                     modificationSystem.scheduleUpdate();
                     break;
                 case 2:
+                    // Take the initial data from file
+                    modificationSystem.readDataFromFile();
                     modificationSystem.executePending();
                     break;
                 case 3:
-                    exit=true;
+                    exit = true;
                     break;
                 default:
                     System.out.println("Invalid Option!");
                     break;
             }
         }
-
-
     }
-
 }

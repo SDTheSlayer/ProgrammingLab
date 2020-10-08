@@ -1,5 +1,9 @@
 package Q2DataModification;
 
+
+/**
+ * Class for storing the details for one update
+ */
 public class Update {
     private String rollNo;
     private Integer changeInMarks;
