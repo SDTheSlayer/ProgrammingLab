@@ -1,0 +1,3 @@
+170101008, Annanya, a@iitg.ac.in,-63,TA2
+170101086,Shivang,shiva@iitg.ac.in,78,TA1
+170101084,Udbhav,Udbhav@iitg.ac.in,30,CC

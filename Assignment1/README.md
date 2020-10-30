@@ -1,5 +1,5 @@
-##### Commands are assumed to be run from the root of the folder provided.
-##### Hence the folder from which commands are run should contain src and resources folder , as well as "forms_rt.jar".
+##### Commands are assumed to be run from the Assignment1 folder provided. (Current Directory should be Assignment1)
+##### Hence the folder from which commands are run should contain src and resources folder, as well as "forms_rt.jar".
 
 The source code is compiled used java 11 (Openjdk  "11.0.8").
 ***
