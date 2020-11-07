@@ -6,19 +6,21 @@
 :-dynamic savedRoute/5. 
  
 %% Knowledge base of bus routes %%
-bus(100,'Amingaon','Jalukbari',14,15,10,10).
-bus(101,'Jalukbari','Paltanbazaar',15,17,4,3).
-bus(102,'Jalukbari','Paltanbazaar',14.5,17,4,2).
-bus(102,'Paltanbazaar','Fancybazaar',18,23,6,9).
-bus(120,'Jalukbari','Panbazar',15,17,10,8).
-bus(121,'Jalukbari','Panbazar',15,18.5,9,9).
-bus(122,'Jalukbari','Panbazar',15,19,8,10).
-bus(255,'Jalukbari','Maligaon',15,16,2,2).
-bus(256,'Maligaon','Panbazar',16,16.5,1,8).
-bus(301,'Maligaon','Lokhra',16,17,7,1).
-bus(302,'Lokhra','Panbazar',17,18,8,3).
-bus(900,'Panbazar','Chandmari',16.5,19.5,7,8).
-bus(901,'Panbazar','Chandmari',19.5,21,7,8).
+bus(101,'Aundh','ShivajiNagar',12,14,8,10).
+bus(111,'ShivajiNagar','Pashan',15,17,4,3).
+bus(112,'ShivajiNagar','Pashan',14.5,16.5,4,5).
+bus(132,'ShivajiNagar','Koregaon',15,18.5,10,11).
+bus(133,'ShivajiNagar','Koregaon',15.5,19,11,5).
+bus(137,'ShivajiNagar','Koregaon',15,17,8,12).
+bus(139,'ShivajiNagar','Hadapsar',15,16,4,5).
+bus(152,'Pashan','Baner',18,19,2,10).
+bus(154,'Pashan','LaxmiRoad',12,18,22,12).
+bus(701,'Koregaon','MagarPatta',17.5,19.5,7,5).
+bus(709,'Koregaon','MagarPatta',19.5,21,6,8).
+bus(1101,'Hadapsar','Koregaon',16,18,3,9).
+bus(1202,'Hadapsar','LaxmiRoad',16,17,7,5).
+bus(1305,'LaxmiRoad','Koregaon',17,18,8,12).
+
 
 %% Utility Functions to to choose the metric for optimizing%%
  
@@ -129,7 +131,7 @@ findShortestRoute(Start, End, OptimizeType) :-
     TotTime is Time,
     writef('Optimal %w:\n',[OptimizeType]),
     outputRoute([[Origin, Number] | Route]),                                        
-    writef('\nDistance=%w, Time=%w, Cost=%w\n', [Dist,TotTime,Cost]),!.
+    writef('\nDistance=%w, Time=%w, Cost=%w\n\n', [Dist,TotTime,Cost]),!.
   
 % Fails if no route to destination exists.
 findShortestRoute(Start, End,_) :-
